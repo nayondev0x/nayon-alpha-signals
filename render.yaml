@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: nayon-alpha-signals
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: RAPIDAPI_HOST_TECHNICAL
+        value: crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com
+      - key: RAPIDAPI_HOST_PRICE
+        value: real-time-crypto-price-api.p.rapidapi.com
+      - key: RAPIDAPI_HOST_TRADERS
+        value: traders-hub-trading-signals5.p.rapidapi.com
+      - key: RAPIDAPI_HOST_SELFTRADE
+        value: selftrade.p.rapidapi.com
+      - key: RAPIDAPI_HOST_STOCKTA
+        value: stock-technical-analysis1.p.rapidapi.com
+      - key: RAPIDAPI_HOST_TVDATA
+        value: tradingview-data1.p.rapidapi.com
+      - key: RAPIDAPI_HOST_FUTURES
+        value: real-time-future-price-api.p.rapidapi.com
+      - key: RAPIDAPI_HOST_FXTREND
+        value: trend-and-strength-api-for-forex-gold-xauusd.p.rapidapi.com
+      - key: RAPIDAPI_HOST_QUANTSIG
+        value: quantsignalpro.p.rapidapi.com
+      - key: RAPIDAPI_HOST_DATANEST
+        value: stock-market-by-datanest.p.rapidapi.com
+      - key: RAPIDAPI_HOST_QUICKSILVER
+        value: quicksilver-trading-signals-api1.p.rapidapi.com
+      - key: RAPIDAPI_HOST_RTMARKET
+        value: real-time-crypto-stock-market-api-prices-trends.p.rapidapi.com
